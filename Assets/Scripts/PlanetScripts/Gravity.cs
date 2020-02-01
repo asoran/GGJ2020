@@ -7,22 +7,20 @@ using UnityEngine;
 public class Gravity : MonoBehaviour
 {
     [SerializeField] float forceGravitionelle= 50.0f;// à moduler
-    SphereCollider gravityRegions;
-    SphereCollider planet;
+    public SphereCollider gravityRegions;
+    public SphereCollider planet;
     float distanceAttraction;
 
     void Awake(){
-        gravityRegions= GetComponent<SphereCollider>();
         gravityRegions.isTrigger= true;
-        planet= GetComponentInChildren<SphereCollider>();
         distanceAttraction= gravityRegions.radius - planet.radius;
     }
-    // Start is called before the first frame update
-    void onTriggerStay(Collider other){
+    void onTriggerStay (Collider other){
+        Debug.Log("k");
         if(other.attachedRigidbody){
             float intensite= Vector3.Distance(transform.position,other.transform.position)/gravityRegions.radius;
+            Debug.Log(intensite);
             other.attachedRigidbody.AddForce((transform.position-other.transform.position)* intensite*forceGravitionelle*Time.deltaTime);
-            
         }
     }
 }
