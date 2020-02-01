@@ -25,12 +25,12 @@ MonoBehaviour:
       centre: {x: 0, y: 0, z: 0}
       minValue: 1.06
   - enabled: 1
-    useFirstLayerAsMask: 0
+    useFirstLayerAsMask: 1
     noiseSettings:
-      strength: 0.36
+      strength: 5.67
       numLayers: 5
       baseRoughness: 1.08
       roughness: 2.34
       persistence: 0.5
-      centre: {x: 0, y: 0, z: 0}
+      centre: {x: 0, y: 0, z: 4.61}
       minValue: 1.25
