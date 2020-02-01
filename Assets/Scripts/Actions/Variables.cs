@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Variables : MonoBehaviour
 {
@@ -13,7 +14,10 @@ public class Variables : MonoBehaviour
     private int parasite_mute = 0;
     public TextMeshProUGUI text_parasite;
     public TextMeshProUGUI text_parasite_mute;
+    public Image logoRandom;
     private float timeReproduction = 5.0f;
+     
+
      
      void Update()
      {
@@ -82,5 +86,8 @@ public class Variables : MonoBehaviour
     {
         text_score.text = "Score: " + score.ToString();
         text_parasite.text = "Parasite: " + parasite.ToString();
+        Color temp = logoRandom.color;
+        temp.a=0f;
+        logoRandom.color = temp;
     }
 }
