@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Action_Tsunami : Action
+public class Action_monteEau : Action
 {
     protected override void doAction()
     {
         int value= Random.Range(1,100);
-        this.variables.addToScore(value <= 40 ? 20 : -25);
-        if(value<=40) this.variables.die(13);
+        this.variables.addToScore(value <= 80 ? 2 : (value >= 97 ? -10 : 0));
+        if(value<=80) this.variables.die(2);
     }
 
     protected override void start()
     {
-        text_button.text = "Tsunami";
+        text_button.text = "Montée des eaux";
     }
 }
+
