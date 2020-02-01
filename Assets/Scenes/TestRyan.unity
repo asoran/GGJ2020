@@ -1657,8 +1657,8 @@ GameObject:
   - component: {fileID: 1248870447}
   - component: {fileID: 1248870446}
   - component: {fileID: 1248870445}
-  - component: {fileID: 1248870448}
   - component: {fileID: 1248870444}
+  - component: {fileID: 1248870448}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -1695,10 +1695,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1248870442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 339c1b9e73af8fd4b8d98b6c7218f7c9, type: 3}
+  m_Script: {fileID: 11500000, guid: e88328e1203a50b4c84037a736add350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: a77629bcca6d55a4cb76f9051d6ded7e, type: 3}
+  sprite: {fileID: 21300000, guid: 6d33df810d6acb843b4cbcbf258ceb4f, type: 3}
 --- !u!114 &1248870445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1760,8 +1760,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 6d33df810d6acb843b4cbcbf258ceb4f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1843,7 +1843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 339c1b9e73af8fd4b8d98b6c7218f7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: a77629bcca6d55a4cb76f9051d6ded7e, type: 3}
+  sprite: {fileID: 21300000, guid: 55727a8c75216ae4f8fa6546f303bbf6, type: 3}
 --- !u!114 &1479508528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1905,8 +1905,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 55727a8c75216ae4f8fa6546f303bbf6, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2372,9 +2372,9 @@ GameObject:
   - component: {fileID: 2040570827}
   - component: {fileID: 2040570831}
   - component: {fileID: 2040570830}
+  - component: {fileID: 2040570833}
   - component: {fileID: 2040570829}
   - component: {fileID: 2040570832}
-  - component: {fileID: 2040570828}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -2402,19 +2402,6 @@ RectTransform:
   m_AnchoredPosition: {x: -94.1, y: 82}
   m_SizeDelta: {x: 211.8, y: 279.83}
   m_Pivot: {x: 0.5, y: 0}
---- !u!114 &2040570828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2040570826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 339c1b9e73af8fd4b8d98b6c7218f7c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: a77629bcca6d55a4cb76f9051d6ded7e, type: 3}
 --- !u!114 &2040570829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2476,8 +2463,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 7ee3c8e2afc8002469eb0fd89a9218d1, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2506,6 +2493,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 764960817a348e8458fe495ffd989dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2040570833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040570826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ec9d29d6ca5484c8beb3a32e63f6cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 7ee3c8e2afc8002469eb0fd89a9218d1, type: 3}
 --- !u!1 &2095779156
 GameObject:
   m_ObjectHideFlags: 0
@@ -2608,8 +2608,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2fe97bff2aa62b14e9abfefa27dba0f7, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2638,7 +2638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cef5f2651f5c9c4a8138aba78da7d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 6d33df810d6acb843b4cbcbf258ceb4f, type: 3}
+  sprite: {fileID: 21300000, guid: 2fe97bff2aa62b14e9abfefa27dba0f7, type: 3}
 --- !u!114 &2095779162
 MonoBehaviour:
   m_ObjectHideFlags: 0
