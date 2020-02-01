@@ -9,7 +9,7 @@ public abstract class Action : MonoBehaviour
 
     private ActionManager actionManager;
     protected Variables variables;
-
+    public Sprite sprite;
     private Button button;
     protected TextMeshProUGUI text_button;
 
@@ -27,8 +27,6 @@ public abstract class Action : MonoBehaviour
                 button.onClick.AddListener(executeAction);
 
             text_button = GetComponentInChildren<TextMeshProUGUI>();
-
-            start();
         }
     }
 
@@ -37,8 +35,5 @@ public abstract class Action : MonoBehaviour
         doAction();
         actionManager.shuffleButtons();
     }
-
-    protected abstract void start();
     protected abstract void doAction();
-
 }

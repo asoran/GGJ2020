@@ -9,7 +9,6 @@ public class Gravity : MonoBehaviour
     [SerializeField] float forceGravitionelle = 50.0f; // à moduler
     public SphereCollider gravityRegions;
     public SphereCollider planet;
-
     void OnTriggerStay (Collider other) {
         if(other.attachedRigidbody){
             float intensite = Vector3.Distance(transform.position,

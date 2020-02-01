@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.UI;
 public class ActionManager : MonoBehaviour
 {
     public List<GameObject> buttons;
@@ -24,9 +25,8 @@ public class ActionManager : MonoBehaviour
             int i = Random.Range(0, actions.Count);
 
             Action a = actions[i];
-            
-            Component c = o.AddComponent(a.GetType());
-
+            o.AddComponent(a.GetType());
+            o.GetComponent<Image> ().sprite = a.sprite;
             usedActions.Add(a);
             actions.Remove(a);
         }
