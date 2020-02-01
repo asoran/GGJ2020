@@ -50,6 +50,9 @@ public class Planet : MonoBehaviour
                 meshObj.transform.parent = transform; //pour garder la hiérarchie organisée c:
 
                 meshObj.AddComponent<MeshRenderer>();
+                meshObj.AddComponent<MeshCollider>();
+                meshObj.GetComponent<MeshCollider>().convex = true;
+                meshObj.GetComponent<MeshCollider>().isTrigger = true;
                 meshFilters[i] = meshObj.AddComponent<MeshFilter>();
                 meshFilters[i].sharedMesh = new Mesh();
             }
