@@ -6,7 +6,7 @@ public class CameraZoom : MonoBehaviour
 {
     public Vector3 newDesiredPositionIn;
     public Vector3 newDesiredPositionOut;
-    void Update()
+    public void Start()
     {
         StartCoroutine(LerpFromTo(transform.position, newDesiredPositionIn, 2f));
     }
