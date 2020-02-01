@@ -73,7 +73,7 @@ public class Variables : MonoBehaviour
         text_parasite.text = "Parasite: " + this.parasite;
     }
 
-    public int getParasite(int parasite)
+    public int getParasite()
     {
         return this.parasite;
     }

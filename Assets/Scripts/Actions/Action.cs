@@ -30,7 +30,6 @@ public abstract class Action : MonoBehaviour
 
             start();
         }
-        
     }
 
     private void executeAction()
