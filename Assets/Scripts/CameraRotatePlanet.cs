@@ -22,39 +22,18 @@ public class CameraRotatePlanet : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * mouseSensibility;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensibility;
 
-        /*xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        bool isDown = Input.GetMouseButton(0);
 
-        yRotation -= mouseX;
-        yRotation = Mathf.Clamp(yRotation, 0f, 360f);*/
+        if(isDown) {
+            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if(Physics.Raycast(ray, out hit)){
+                if(hit.collider.gameObject == planet) {
+                    transform.RotateAround(planet.transform.position, transform.up, mouseX * Time.deltaTime * mouseSensibility);
+                    transform.RotateAround(planet.transform.position, -transform.right, mouseY * Time.deltaTime * mouseSensibility);
+                }
+            }
+        }
 
-        Vector3 distance = new Vector3(mouseX, mouseY, mouseX + mouseY);
-
-        //transform.position = new Vector3(50 * Mathf.Cos(mouseX / 2), 50 * Mathf.Cos(mouseY / 2), 0);
-        //transform.position = new Vector3(mouseX, mouseY, 0) + transform.position;
-
-        //Vector3 p = transform.position;
-        //transform.position = new Vector3(mouseX + p.x, mouseY + p.y, 4);
-
-        //Vector3 p = transform.position;
-
-        //Quaternion.RotateTowards(Quaternion.identity, planet.transform.rotation, 2f);
-        //transform.position = new Vector3(mouseX, mouseY, mouseX + mouseY) + transform.position;
-
-        //print("bruh : " + mouseX);
-        //print(transform.position.x);
-
-        Vector3 p = transform.position;
-
-        //if (mouseX > 0.01f) {
-        //    print("bruh : " + mouseX);
-        //    print(transform.position.x);
-        //    //transform.position += new Vector3(mouseX, 0, 0);
-        //    transform.position = new Vector3(4f * Mathf.Sin((transform.position.x+mouseX)/9f), transform.position.y, transform.position.z);
-
-        //}
-        //transform.LookAt(planet.transform);
-        transform.RotateAround(planet.transform.position, Vector3.down, mouseX * Time.deltaTime * mouseSensibility);
-        transform.RotateAround(planet.transform.position, Vector3.right, mouseY * Time.deltaTime * mouseSensibility);
     }
 }
