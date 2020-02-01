@@ -440,9 +440,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 668188669}
+  - component: {fileID: 668188671}
+  - component: {fileID: 668188670}
+  - component: {fileID: 668188672}
   m_Layer: 0
   m_Name: ButtonManager
-  m_TagString: Untagged
+  m_TagString: ButtonManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -461,6 +464,52 @@ Transform:
   m_Father: {fileID: 1800951361}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &668188670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668188668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 339c1b9e73af8fd4b8d98b6c7218f7c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &668188671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668188668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1857b28cd5a1984489a82451abee7079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 2095779156}
+  - {fileID: 1479508525}
+  - {fileID: 1248870442}
+  - {fileID: 2040570826}
+  actions:
+  - {fileID: 668188670}
+  - {fileID: 668188670}
+  - {fileID: 668188672}
+  - {fileID: 668188672}
+--- !u!114 &668188672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668188668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e88328e1203a50b4c84037a736add350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &704904485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,8 +1535,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 339c1b9e73af8fd4b8d98b6c7218f7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  text_button: {fileID: 0}
 --- !u!114 &1248870445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1723,8 +1770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 339c1b9e73af8fd4b8d98b6c7218f7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  text_button: {fileID: 0}
 --- !u!114 &1479508528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2076,8 +2121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 339c1b9e73af8fd4b8d98b6c7218f7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  text_button: {fileID: 0}
 --- !u!114 &2040570829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2310,5 +2353,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 339c1b9e73af8fd4b8d98b6c7218f7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  text_button: {fileID: 0}
