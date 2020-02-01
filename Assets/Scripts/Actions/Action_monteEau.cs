@@ -10,10 +10,5 @@ public class Action_monteEau : Action
         this.variables.addToScore(value <= 80 ? 2 : (value >= 97 ? -10 : 0));
         if(value<=80) this.variables.die(2);
     }
-
-    protected override void start()
-    {
-        text_button.text = "Montée des eaux";
-    }
 }
 

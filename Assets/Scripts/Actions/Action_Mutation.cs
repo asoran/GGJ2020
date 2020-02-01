@@ -11,9 +11,4 @@ public class Action_Mutation : Action
         else this.variables.addToScore(value <= 60 ? 10 : 0);
         if(value<=60) this.variables.die(4);
     }
-
-    protected override void start()
-    {
-        text_button.text = "Mutation Génétique";
-    }
 }

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Action_Tsunami : Action
+public class Action_refroidissement : Action
 {
     protected override void doAction()
     {
         int value= Random.Range(1,100);
-        this.variables.addToScore(value <= 40 ? 20 : -25);
-        if(value<=40) this.variables.die(13);
+        this.variables.addToScore(value <= 30 ? 70 : -50);
+        if(value<=30) this.variables.die(50);
     }
 }

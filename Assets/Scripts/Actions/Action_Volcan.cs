@@ -10,9 +10,4 @@ public class Action_Volcan : Action
         this.variables.addToScore(value <= 50 ? 20 : -20);
         if(value<=50) this.variables.die(15);
     }
-
-    protected override void start()
-    {
-        text_button.text = "Eruption volcanique";
-    }
 }

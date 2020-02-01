@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(SphereCollider))]
 public class Gravity : MonoBehaviour
 {
-    [SerializeField] float forceGravitionelle= 50.0f;// à moduler
+    [SerializeField] float forceGravitionelle= 5.0f;// à moduler
     public SphereCollider gravityRegions;
     public SphereCollider planet;
     float distanceAttraction;
@@ -15,11 +15,9 @@ public class Gravity : MonoBehaviour
         gravityRegions.isTrigger= true;
         distanceAttraction= gravityRegions.radius - planet.radius;
     }
-    void onTriggerStay (Collider other){
-        Debug.Log("k");
+    void OnTriggerStay (Collider other){
         if(other.attachedRigidbody){
             float intensite= Vector3.Distance(transform.position,other.transform.position)/gravityRegions.radius;
-            Debug.Log(intensite);
             other.attachedRigidbody.AddForce((transform.position-other.transform.position)* intensite*forceGravitionelle*Time.deltaTime);
         }
     }
