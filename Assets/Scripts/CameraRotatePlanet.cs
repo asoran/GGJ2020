@@ -13,8 +13,6 @@ public class CameraRotatePlanet : MonoBehaviour
 
     private Camera camGirl;
     private Vector3 offset;
-    private float xRotation = 0f;
-    private float yRotation = 0f;
 
     private void Start()
     {
@@ -51,9 +49,13 @@ public class CameraRotatePlanet : MonoBehaviour
         Vector3 limit = (Vector3.Scale(new Vector3(100, 100, 100), transform.forward));
    
         //if (scroll != 0f && ( ((Vector3.Scale(transform.position, transform.forward)) - (Vector3.Scale(planet.transform.position, transform.forward)) )).magnitude < (Vector3.Scale(new Vector3(100,100,100), transform.forward)).magnitude   || -Mathf.Sign(scroll) == Mathf.Sign((transform.InverseTransformPoint(transform.position) - transform.InverseTransformPoint(planet.transform.position)).z) )
-        if (scroll != 0f && (transform.InverseTransformPoint(planet.transform.position).z < limitBackZoom && transform.InverseTransformPoint(planet.transform.position).z > limitFrontZoom) || Mathf.Sign(scroll) == Mathf.Sign(transform.InverseTransformPoint(planet.transform.position).z - limitFrontZoom) )
+        if (Settings.gameManager.isCinematicOpeningEnded)
         {
-            transform.position += transform.forward * scroll;
+            if (scroll != 0f && (transform.InverseTransformPoint(planet.transform.position).z < limitBackZoom && transform.InverseTransformPoint(planet.transform.position).z > limitFrontZoom) || Mathf.Sign(scroll) == Mathf.Sign(transform.InverseTransformPoint(planet.transform.position).z - limitFrontZoom))
+            {
+                print("ransform");
+                transform.position += transform.forward * scroll;
+            }
         }
     }
 }
