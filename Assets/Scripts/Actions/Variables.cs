@@ -87,16 +87,18 @@ public class Variables : MonoBehaviour
         parasite-=(int)(parasite*probabilite);
      }
      public void die(int time){
-        parasite_mute-= (int)(parasite_mute*0.03f*time);
-        parasite-=(int)(parasite*0.001f*time);
-        if(parasite_mute<0) parasite_mute=0;
-        if(parasite<0) parasite=0;
+        parasite_mute -= (int)(parasite_mute * 0.03f * time);
+        parasite -=(int)(parasite * 0.001f * time);
+        if (parasite_mute < 0) 
+            parasite_mute = 0;
+        if(parasite < 0) 
+            parasite = 0;
         StartCoroutine(DieParasites(parasite_mute * 0.03f * time, Time.deltaTime * 8));
-        text_parasite.text = "parasite:"+this.parasite;
-        text_parasite_mute.text = "parasite mute:"+this.parasite_mute;
+        text_parasite.text = "parasite:" + this.parasite;
+        text_parasite_mute.text = "parasite mute:" + this.parasite_mute;
      }
      public void eat(){
-        float perte=(parasite_mute*0.03f)+(parasite*0.01f);
+        float perte = (parasite_mute * 0.03f) + (parasite * 0.01f);
         addToScore(-perte);
      }
     public void addToScore(float score)
@@ -105,46 +107,44 @@ public class Variables : MonoBehaviour
         if (this.score >= 200)
         {
             text_score.text = "Gagné";
-            AudioManager.instance.Stop(AudioManager.instance.musicPlayed.name);
+
             AudioManager.instance.Play("Hope");
         } 
-        else if(this.score<=-100)
+        else if(this.score <= -100)
         {
             text_score.text = "Perdu";
-            AudioManager.instance.Stop(AudioManager.instance.musicPlayed.name);
+
             AudioManager.instance.Play("Despair");
         } 
         else 
             text_score.text = "Score: " + this.score;
 
-        if (score > 50)
+        if (this.score > 150)
         {
-            AudioManager.instance.Stop(AudioManager.instance.musicPlayed.name);
+            AudioManager.instance.Play("Futur");
+        } else if (this.score > 100)
+        {
+            AudioManager.instance.Play("Healing");
+
+        } else if (this.score > 50)
+        {
             AudioManager.instance.Play("Understanding");
-        } else if (score > 100)
+
+        } else if (this.score >= -25 && this.score <= 50)
         {
-            AudioManager.instance.Stop(AudioManager.instance.musicPlayed.name);
-            AudioManager.instance.Play("Healing");
-        } else if (score > 150)
-        {
-            AudioManager.instance.Stop(AudioManager.instance.musicPlayed.name);
-            AudioManager.instance.Play("Healing");
-        } else if (score >= -25 && score <= 50)
-        {
-            AudioManager.instance.Stop(AudioManager.instance.musicPlayed.name);
             AudioManager.instance.Play("Odyssey");
-        } else if (score < -25)
+
+        } else if (this.score < -75)
         {
-            AudioManager.instance.Stop(AudioManager.instance.musicPlayed.name);
-            AudioManager.instance.Play("Oddity");
-        } else if (score < -50)
-        {
-            AudioManager.instance.Stop(AudioManager.instance.musicPlayed.name);
-            AudioManager.instance.Play("Trouble");
-        } else if (score < -75)
-        {
-            AudioManager.instance.Stop(AudioManager.instance.musicPlayed.name);
             AudioManager.instance.Play("Danger");
+
+        } else if (this.score < -50)
+        {
+            AudioManager.instance.Play("Trouble");
+
+        } else if (this.score < -25)
+        {
+            AudioManager.instance.Play("Oddity");
         }
     }
     public void mutationEnd()
