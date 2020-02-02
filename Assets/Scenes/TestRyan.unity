@@ -564,6 +564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 339c1b9e73af8fd4b8d98b6c7218f7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planet: {fileID: 0}
   sprite: {fileID: 21300000, guid: 55727a8c75216ae4f8fa6546f303bbf6, type: 3}
   drawChance: 11.111111
   rarity: 2
@@ -612,6 +613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e88328e1203a50b4c84037a736add350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planet: {fileID: 0}
   sprite: {fileID: 21300000, guid: 6d33df810d6acb843b4cbcbf258ceb4f, type: 3}
   drawChance: 11.111111
   rarity: 0
@@ -627,6 +629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cef5f2651f5c9c4a8138aba78da7d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planet: {fileID: 0}
   sprite: {fileID: 21300000, guid: 2fe97bff2aa62b14e9abfefa27dba0f7, type: 3}
   drawChance: 11.111111
   rarity: 2
@@ -642,6 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 910354180cf4ea048bdc0394a17a0177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planet: {fileID: 0}
   sprite: {fileID: 21300000, guid: 2df956ec2fc87fb468169c07b42b746c, type: 3}
   drawChance: 11.111111
   rarity: 1
@@ -657,6 +661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e7fc00e5661c7d46ab243c387e0086b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planet: {fileID: 0}
   Logo: {fileID: 21300000, guid: e8b01763e6528f9418c0ae1ffa245a2a, type: 3}
 --- !u!114 &668188676
 MonoBehaviour:
@@ -690,6 +695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8909069fbe20feb45a2e26836b97caf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planet: {fileID: 0}
   Logo: {fileID: 21300000, guid: 83fe1b0b1ee3d0d40b4cba787dec0d9d, type: 3}
 --- !u!114 &668188678
 MonoBehaviour:
@@ -703,6 +709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1088b0c76e3f1d74f85c4bc6c6b60acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planet: {fileID: 0}
   Logo: {fileID: 0}
 --- !u!114 &668188679
 MonoBehaviour:
@@ -716,6 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ec9d29d6ca5484c8beb3a32e63f6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planet: {fileID: 0}
   sprite: {fileID: 21300000, guid: 7ee3c8e2afc8002469eb0fd89a9218d1, type: 3}
   drawChance: 11.111111
   rarity: 0
@@ -731,6 +739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcced62263188ee4b8069189c075ea57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planet: {fileID: 0}
   sprite: {fileID: 21300000, guid: 759132d1edd208c47ae3434811f0db09, type: 3}
   drawChance: 11.111111
   rarity: 2
@@ -746,6 +755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1cad5e427840ee4f870897723fbce08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planet: {fileID: 0}
   sprite: {fileID: 21300000, guid: cbf04a472d5bcf74780e56864fa2a5ca, type: 3}
   drawChance: 11.111111
   rarity: 4
@@ -761,6 +771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c82bca523d048d2409e3b3de1fdb9cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planet: {fileID: 0}
   sprite: {fileID: 21300000, guid: a77629bcca6d55a4cb76f9051d6ded7e, type: 3}
   drawChance: 11.111111
   rarity: 2
@@ -776,7 +787,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b067e3aae1f76847801f805c45db49e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planet: {fileID: 0}
   sprite: {fileID: 21300000, guid: 2fdba70c90c8f8848ac51d814c716543, type: 3}
+  drawChance: 11.111111
+  rarity: 0
 --- !u!114 &668188684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,6 +803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e59aae458f7246d48be379442168304a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planet: {fileID: 0}
   Logo: {fileID: 21300000, guid: 9d50c485ecae90346a687d79ffc8c231, type: 3}
 --- !u!114 &668188685
 MonoBehaviour:
@@ -802,6 +817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a88369c53c2d19a42ae9cf26ef932c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planet: {fileID: 0}
   Logo: {fileID: 21300000, guid: adf599c49e397eb43be04f0e616f0b31, type: 3}
 --- !u!114 &668188686
 MonoBehaviour:
@@ -815,6 +831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 697b2998d50ba93428074197782b753e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planet: {fileID: 0}
   Logo: {fileID: 21300000, guid: 729d7d3e7117cfa499f9d130af926db8, type: 3}
 --- !u!114 &668188687
 MonoBehaviour:
@@ -828,6 +845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1796b1529e57c474c960c45be029d436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planet: {fileID: 0}
   Logo: {fileID: 21300000, guid: fc6bfe97bfd95394fb74b96ac8a1545b, type: 3}
 --- !u!1 &704904485
 GameObject:

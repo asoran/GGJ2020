@@ -19,12 +19,15 @@ public class CooldownScript : MonoBehaviour
 
     private IEnumerator Waiting()
     {
-        button.interactable = false;
         Image img = button.gameObject.GetComponent<Image>();
         Color tmp = img.color;
+
+        button.interactable = false;
         tmp.a = 0f;
         img.color = tmp;
+
         yield return new WaitForSeconds(waitTime);
+
         tmp.a = 1f;
         img.color = tmp;
         button.interactable = true;
