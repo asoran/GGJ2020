@@ -5,21 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Gym/Gym_Alexandre.unity
-    guid: 1ebab180f7f7ec7409e924da4d6eda14
+    path: Assets/Scenes/Menu.unity
+    guid: a9c69ccde8f742443bc20f2b4897bcd2
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: fbb76f886587dea49a56ac4195aff1ff
-  - enabled: 1
-    path: Assets/Scenes/TESTINGANIMATION.unity
-    guid: f86214e5c14caca41b5ec31edd83ad34
-=======
-    path: Assets/Scenes/MainScene.unity
-    guid: fbb76f886587dea49a56ac4195aff1ff
->>>>>>> 34184e04525796be19292cf7f828d8fa650ee05c
   m_configObjects: {}

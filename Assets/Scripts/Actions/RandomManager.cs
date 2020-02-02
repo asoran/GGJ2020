@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class RandomManager : MonoBehaviour
 {
+    private bool possible;
     public List<Random_Event> events;
     protected Variables variables;
     private float randomEvent = 20.0f;
@@ -15,14 +16,14 @@ public class RandomManager : MonoBehaviour
          {
              int i = Random.Range(0, events.Count);
              Random_Event a = events[i];
-             a.doSomething();
-             if(a.Logo!=null){
-                 this.variables.logoRandom.sprite=a.Logo;
+             if(a.Logo!=null && a.getDispo()){
+                a.doSomething();
+                this.variables.logoRandom.sprite=a.Logo;
                 Color temp = this.variables.logoRandom.color;
                 temp.a=1f;
                 this.variables.logoRandom.color = temp;
              }
-             randomEvent=10.0f;
+             randomEvent=20.0f;
          }else if(randomEvent < 4.0f){
              this.variables.text_event.text="";
              Color temp = this.variables.logoRandom.color;
