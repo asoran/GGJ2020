@@ -8,5 +8,6 @@ public class Random_Asteroid : Random_Event
         this.variables.text_event.text="Un astéroide s'est écrasé";
         this.variables.addToScore(-25);
         this.variables.die(20);
+        planet.SetActive(true);
     }
 }
