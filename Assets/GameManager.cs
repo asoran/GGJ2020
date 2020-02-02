@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 
     public bool isCinematicOpeningEnded = false;
     public GameObject Buttons;
+    public Parasite para;
 
     private void Start()
     {
