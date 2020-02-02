@@ -34,9 +34,7 @@ public class CameraRotatePlanet : MonoBehaviour
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if(Physics.Raycast(ray, out hit)){
-                print("raycast");
                 if(hit.collider.gameObject == planet) {
-                    print("collider");
                     transform.RotateAround(planet.transform.position, transform.up, mouseX);
                     transform.RotateAround(planet.transform.position, -transform.right, mouseY);
                     //transform.LookAt(planet.transform.position, transform.up);
@@ -47,13 +45,9 @@ public class CameraRotatePlanet : MonoBehaviour
                 }
             }
         }
-        //print(scroll);
-        //print(((Vector3.Scale(transform.position, transform.forward)) - (Vector3.Scale(planet.transform.position, transform.forward))));
-        //Vector3 diffcamplan = ((Vector3.Scale(transform.position, transform.forward)) - (Vector3.Scale(planet.transform.position, transform.forward)));
-        //Vector3 limit = (Vector3.Scale(new Vector3(100, 100, 100), transform.forward));
-        //print("limit : " + limit);
-        //print("itp cam : " + (transform.InverseTransformPoint(transform.position)).z);
-        //print("itp planet : " + (transform.InverseTransformPoint(planet.transform.position)).z);
+        Vector3 diffcamplan = ((Vector3.Scale(transform.position, transform.forward)) - (Vector3.Scale(planet.transform.position, transform.forward)));
+        Vector3 limit = (Vector3.Scale(new Vector3(100, 100, 100), transform.forward));
+   
         //if (scroll != 0f && ( ((Vector3.Scale(transform.position, transform.forward)) - (Vector3.Scale(planet.transform.position, transform.forward)) )).magnitude < (Vector3.Scale(new Vector3(100,100,100), transform.forward)).magnitude   || -Mathf.Sign(scroll) == Mathf.Sign((transform.InverseTransformPoint(transform.position) - transform.InverseTransformPoint(planet.transform.position)).z) )
         if (Settings.gameManager.isCinematicOpeningEnded)
         {
