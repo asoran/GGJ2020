@@ -104,9 +104,9 @@ public class Variables : MonoBehaviour
 
 
     public Slider slider;
-    public void addToScore(float score)
+    public void addToScore(float _score)
     {
-        this.score += score;
+        this.score += _score;
         slider.value = this.score;
 
         if (this.score >= 200)
