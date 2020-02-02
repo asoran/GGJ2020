@@ -14,6 +14,7 @@ public class Random_OVNI : Random_Event
             this.variables.die(5);   
         }
         planet.SetActive(true);
+        Debug.Log(planet.GetComponent<Animation>());
         planet.GetComponent<Animation>().Play("ovniAnimator");
     }
 }
