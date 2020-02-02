@@ -103,11 +103,50 @@ public class Variables : MonoBehaviour
     public void addToScore(float score)
     {
         this.score += score;
-        if(this.score>=200){
+        if (this.score >= 200)
+        {
             text_score.text = "Gagné";
-        }else if(this.score<=-100){
+            AudioManager.instance.Stop(AudioManager.instance.musicPlayed.name);
+            AudioManager.instance.Play("Hope");
+        } 
+        else if(this.score<=-100)
+        {
             text_score.text = "Perdu";
-        }else text_score.text = "Score: " + this.score;
+            AudioManager.instance.Stop(AudioManager.instance.musicPlayed.name);
+            AudioManager.instance.Play("Despair");
+        } 
+        else 
+            text_score.text = "Score: " + this.score;
+
+        if (score > 50)
+        {
+            AudioManager.instance.Stop(AudioManager.instance.musicPlayed.name);
+            AudioManager.instance.Play("Understanding");
+        } else if (score > 100)
+        {
+            AudioManager.instance.Stop(AudioManager.instance.musicPlayed.name);
+            AudioManager.instance.Play("Healing");
+        } else if (score > 150)
+        {
+            AudioManager.instance.Stop(AudioManager.instance.musicPlayed.name);
+            AudioManager.instance.Play("Healing");
+        } else if (score >= -25 && score <= 50)
+        {
+            AudioManager.instance.Stop(AudioManager.instance.musicPlayed.name);
+            AudioManager.instance.Play("Odyssey");
+        } else if (score < -25)
+        {
+            AudioManager.instance.Stop(AudioManager.instance.musicPlayed.name);
+            AudioManager.instance.Play("Oddity");
+        } else if (score < -50)
+        {
+            AudioManager.instance.Stop(AudioManager.instance.musicPlayed.name);
+            AudioManager.instance.Play("Trouble");
+        } else if (score < -75)
+        {
+            AudioManager.instance.Stop(AudioManager.instance.musicPlayed.name);
+            AudioManager.instance.Play("Danger");
+        }
     }
     public void mutationEnd()
     {
