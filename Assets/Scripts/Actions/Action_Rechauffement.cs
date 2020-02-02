@@ -10,4 +10,8 @@ public class Action_Rechauffement : Action
         this.variables.addToScore(value <= 70 ? 50 : -70);
         if(value<=70) this.variables.die(20);
     }
+
+    public override bool isActive() {
+        return this.variables.getScore() <= -65;
+    }
 }

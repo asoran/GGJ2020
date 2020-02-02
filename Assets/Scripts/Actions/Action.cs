@@ -32,10 +32,10 @@ public abstract class Action : MonoBehaviour
         GameObject buttonManager = GameObject.FindGameObjectWithTag("ButtonManager");
         actionManager = buttonManager.GetComponent<ActionManager>();
 
+        variables = GameObject.FindGameObjectWithTag("VariableObject").GetComponent<Variables>();
+
         if(gameObject != buttonManager)
         {
-            variables = GameObject.FindGameObjectWithTag("VariableObject").GetComponent<Variables>();
-
             button = GetComponent<Button>();
             if (button != null)
                 button.onClick.AddListener(executeAction);
@@ -46,11 +46,12 @@ public abstract class Action : MonoBehaviour
 
     private void executeAction()
     {
-        Debug.Log("Doing action");
         doAction();
-        Debug.Log("Donen shuffling");
         actionManager.shuffleButtons();
-        Debug.Log("Shuffling Done");
     }
     protected abstract void doAction();
+
+    public virtual bool isActive() {
+        return true;
+    }
 }

@@ -27,7 +27,8 @@ public class ActionManager : MonoBehaviour
     private float countTotalDrawChance() {
         float tot = 0;
         foreach(Action a in actions) {
-            tot += a.drawChance;
+            if(a.isActive())
+                tot += a.drawChance;
         }
         return tot;
     }
@@ -52,6 +53,8 @@ public class ActionManager : MonoBehaviour
             // Select a cart depending on it's draw rate
             float total = 0f;
             foreach(Action a in actions) {
+                if(!a.isActive()) // If it's not active, skip it
+                    continue;
                 total += a.drawChance;
                 if(!usedActions.Contains(a)) {
                     if(total >= rand) {
