@@ -100,6 +100,9 @@ public class Variables : MonoBehaviour
         float perte=(parasite_mute*0.03f)+(parasite*0.01f);
         addToScore(-perte);
      }
+
+
+    public Slider slider;
     public void addToScore(float score)
     {
         this.score += score;
@@ -108,6 +111,8 @@ public class Variables : MonoBehaviour
         }else if(this.score<=-100){
             text_score.text = "Perdu";
         }else text_score.text = "Score: " + this.score;
+
+        slider.value = this.score;
     }
     public void mutationEnd()
     {
@@ -136,5 +141,6 @@ public class Variables : MonoBehaviour
         Color temp = logoRandom.color;
         temp.a=0f;
         logoRandom.color = temp;
+        text_event.text = "";
     }
 }
