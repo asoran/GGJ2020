@@ -5,12 +5,19 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    private bool isCinematicOpeningEnded;
+    public bool isCinematicOpeningEnded = false;
+    public GameObject Buttons;
 
     private void Start()
     {
         Settings.gameManager = this;
-        isCinematicOpeningEnded = false;
     }
 
+    private void Update()
+    {
+        if (isCinematicOpeningEnded)
+        {
+            Buttons.SetActive(true);
+        }
+    }
 }

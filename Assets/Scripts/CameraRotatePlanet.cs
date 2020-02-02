@@ -27,7 +27,7 @@ public class CameraRotatePlanet : MonoBehaviour
 
         bool isDown = Input.GetMouseButton(0);
 
-        if(isDown) {
+        if(isDown && Settings.gameManager.isCinematicOpeningEnded) {
 
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;

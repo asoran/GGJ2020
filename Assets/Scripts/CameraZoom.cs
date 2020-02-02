@@ -6,6 +6,7 @@ public class CameraZoom : MonoBehaviour
 {
     public Vector3 newDesiredPositionIn;
     public Vector3 newDesiredPositionOut;
+    public GameObject Buttons;
     public void Start()
     {
         StartCoroutine(LerpFromTo(transform.position, newDesiredPositionIn, 2f));
@@ -30,6 +31,7 @@ public class CameraZoom : MonoBehaviour
             yield return 0;
         }
         transform.position = pos2;
+        Settings.gameManager.isCinematicOpeningEnded = true;
     }
 
 }
