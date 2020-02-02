@@ -6,12 +6,26 @@ using TMPro;
 
 public abstract class Action : MonoBehaviour
 {
+
+    public enum RARITY
+    {
+        TRES_COMMUN,
+        COMMUN,
+        PEU_COMMUN,
+        COURANT,
+        RARE
+    }
+
     public GameObject planet;
+
     private ActionManager actionManager;
     protected Variables variables;
     public Sprite sprite;
     private Button button;
     protected TextMeshProUGUI text_button;
+
+    public float drawChance;
+    public RARITY rarity;
 
     private void Start()
     {
@@ -32,8 +46,11 @@ public abstract class Action : MonoBehaviour
 
     private void executeAction()
     {
+        Debug.Log("Doing action");
         doAction();
+        Debug.Log("Donen shuffling");
         actionManager.shuffleButtons();
+        Debug.Log("Shuffling Done");
     }
     protected abstract void doAction();
 }

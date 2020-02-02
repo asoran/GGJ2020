@@ -4,6 +4,15 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+/*
+
+rechauffement reffroidissement 50 et-50 (voir la doc)
+blink 4 cartes
+-100 -> ecran de fin
+implementé rareté (voir doc)
+
+*/
+
 public class Variables : MonoBehaviour
 {
 
