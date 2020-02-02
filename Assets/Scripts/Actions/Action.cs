@@ -29,10 +29,12 @@ public abstract class Action : MonoBehaviour
 
     private void Start()
     {
+   
         GameObject buttonManager = GameObject.FindGameObjectWithTag("ButtonManager");
         actionManager = buttonManager.GetComponent<ActionManager>();
 
         variables = GameObject.FindGameObjectWithTag("VariableObject").GetComponent<Variables>();
+        planet = GameObject.FindGameObjectWithTag("Planet");
 
         if(gameObject != buttonManager)
         {
