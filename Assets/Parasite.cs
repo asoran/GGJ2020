@@ -7,7 +7,7 @@ public class Parasite : MonoBehaviour
     public GameObject character;
     public GameObject planet;
 
-    public void Run()
+    /*public void Run()
     {
         StartCoroutine(Populate(5f));
     }
@@ -24,6 +24,6 @@ public class Parasite : MonoBehaviour
             newCharacter.transform.Rotate(-90, 0, 0);
             yield return 0;
         }
-    }
+    }*/
 
 }

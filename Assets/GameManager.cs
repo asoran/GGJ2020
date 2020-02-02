@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Settings.gameManager = this;
-        para.Run();
+        //para.Run();
     }
 
     private void Update()

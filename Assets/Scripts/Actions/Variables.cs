@@ -16,6 +16,8 @@ implementé rareté (voir doc)
 public class Variables : MonoBehaviour
 {
 
+    public GameObject character;
+    public GameObject planet;
     private float score = 0;
     public TextMeshProUGUI text_score;
     public TextMeshProUGUI text_event;
@@ -25,10 +27,9 @@ public class Variables : MonoBehaviour
     public TextMeshProUGUI text_parasite_mute;
     public Image logoRandom;
     private float timeReproduction = 5.0f;
-     
 
-     
-     void Update()
+
+    void Update()
      {
          timeReproduction -= Time.deltaTime;
          if(timeReproduction < 0)
@@ -36,12 +37,29 @@ public class Variables : MonoBehaviour
              reproduce();
              timeReproduction=5.0f;
          }
-     }
-     public void reproduce(){
+
+        Debug.Log((parasite * 0.1f)/25);
+    }
+
+    IEnumerator Populate(float number, float duration)
+    {
+        for (float t = 0f; t < duration; t += Time.deltaTime)
+        {
+            Vector3 spawnPosition = Random.onUnitSphere * ((planet.transform.GetComponent<Planet>().GetComponent<ShapeSettings>().planetRadius) + character.transform.localScale.y * 0.5f) + planet.transform.position;
+            Quaternion spawnRotation = Quaternion.identity;
+            GameObject newCharacter = Instantiate(character, spawnPosition, spawnRotation) as GameObject;
+            newCharacter.transform.LookAt(planet.transform);
+            newCharacter.transform.Rotate(-90, 0, 0);
+            yield return 0;
+        }
+    }
+
+    public void reproduce(){
         //faire ici la reproduction (à recoder)
         parasite_mute+=(int)(parasite_mute*0.1f);
         //faire ici la reproduction (à recoder)
-        parasite+=(int)(parasite*0.1f);
+        StartCoroutine(Populate((parasite * 0.1f) / 25, Time.deltaTime * 8));
+        parasite +=(int)(parasite*0.1f);
         mutation(0.005f);
         die(1);
         eat();

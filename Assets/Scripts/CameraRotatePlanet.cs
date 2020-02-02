@@ -41,14 +41,15 @@ public class CameraRotatePlanet : MonoBehaviour
                     transform.RotateAround(planet.transform.position, -transform.right, mouseY);
                     //transform.LookAt(planet.transform.position, transform.up);
                     foreach (GameObject go in followingCam) {
-                        go.transform.RotateAround(planet.transform.position, go.transform.up, mouseX);
-                        go.transform.RotateAround(planet.transform.position, -go.transform.right, mouseY);
+                        go.transform.RotateAround(planet.transform.position, transform.up, mouseX);
+                        go.transform.RotateAround(planet.transform.position, -transform.right, mouseY);
                     }
                 }
             }
         }
         Vector3 diffcamplan = ((Vector3.Scale(transform.position, transform.forward)) - (Vector3.Scale(planet.transform.position, transform.forward)));
         Vector3 limit = (Vector3.Scale(new Vector3(100, 100, 100), transform.forward));
+   
         //if (scroll != 0f && ( ((Vector3.Scale(transform.position, transform.forward)) - (Vector3.Scale(planet.transform.position, transform.forward)) )).magnitude < (Vector3.Scale(new Vector3(100,100,100), transform.forward)).magnitude   || -Mathf.Sign(scroll) == Mathf.Sign((transform.InverseTransformPoint(transform.position) - transform.InverseTransformPoint(planet.transform.position)).z) )
         if (scroll != 0f && (transform.InverseTransformPoint(planet.transform.position).z < limitBackZoom && transform.InverseTransformPoint(planet.transform.position).z > limitFrontZoom) || Mathf.Sign(scroll) == Mathf.Sign(transform.InverseTransformPoint(planet.transform.position).z - limitFrontZoom) )
         {
