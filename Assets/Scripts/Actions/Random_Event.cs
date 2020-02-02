@@ -11,6 +11,6 @@ public abstract class Random_Event : MonoBehaviour
     public abstract void doSomething();
     private void Start()
     {
-        variables=GameObject.FindGameObjectWithTag("VariableObject").GetComponent<Variables>();
+        variables = GameObject.FindGameObjectWithTag("VariableObject").GetComponent<Variables>();
     }
 }
