@@ -18,7 +18,7 @@ public class Parasite : MonoBehaviour
 
     private void Update()
     {
-        Run();
+        //Run();
     }
 
 }
