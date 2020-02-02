@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7884849822206902560}
   - component: {fileID: 7579251631186291102}
   - component: {fileID: 4405857156166156792}
-  - component: {fileID: 1881527412136192434}
   - component: {fileID: 8306935871950163961}
   m_Layer: 0
   m_Name: Parasite
@@ -96,18 +95,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1881527412136192434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8219984007466731176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8894e6506212d9f4f80848abf446d5fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &8306935871950163961
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Settings.gameManager = this;
+        para.Run();
     }
 
     private void Update()
@@ -21,4 +22,6 @@ public class GameManager : MonoBehaviour
             Buttons.SetActive(true);
         }
     }
+
+
 }
