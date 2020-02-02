@@ -8,6 +8,8 @@ public class ShapeGenerator
     INoiseFilter[] noiseFilters;
     public MinMax elevationMinMax;
 
+    
+
     public void UpdateSettings(ShapeSettings settings)
     {
         this.settings = settings;

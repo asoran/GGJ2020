@@ -16,6 +16,8 @@ public abstract class Action : MonoBehaviour
         RARE
     }
 
+    public GameObject planet;
+
     private ActionManager actionManager;
     protected Variables variables;
     public Sprite sprite;
