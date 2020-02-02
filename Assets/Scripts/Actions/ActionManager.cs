@@ -34,14 +34,12 @@ public class ActionManager : MonoBehaviour
 
     public void shuffleButtons()
     {
-        Debug.Log("Oui");
         usedActions = new List<Action>();
 
         float maxPercent = countTotalDrawChance();
 
         foreach (GameObject o in buttons)
         {
-            Debug.Log("Button X:");
             Action oldAction = o.GetComponent<Action>();
             if (oldAction != null)
             {
@@ -49,23 +47,18 @@ public class ActionManager : MonoBehaviour
             }
 
             int rand = Random.Range(0, (int)maxPercent);
-            Debug.Log("Rand: " + rand);
             Action action = null;
 
             // Select a cart depending on it's draw rate
             float total = 0f;
             foreach(Action a in actions) {
-                Debug.Log("Total: " + total);
                 total += a.drawChance;
-                Debug.Log("Total: " + total);
                 if(!usedActions.Contains(a)) {
                     if(total >= rand) {
-                        Debug.Log("is ok");
                         action = a; 
                         maxPercent -= a.drawChance;
                         break;
                     } else {
-                        Debug.Log("Is NOT ok");
                     }
                 }
             }
@@ -81,7 +74,6 @@ public class ActionManager : MonoBehaviour
             o.GetComponent<CooldownScript>().CoolDown();
         }
 
-        Debug.Log("Shuffle finished");
     }
 
 }
