@@ -6,7 +6,7 @@ using UnityEditor;
 //[CustomEditor(typeof(Planet))]
 public class PlanetEditor : Editor
 {
-    /*Planet planet;
+    Planet planet;
     Editor shapeEditor;
     Editor colourEditor;
 
@@ -26,8 +26,8 @@ public class PlanetEditor : Editor
             planet.GeneratePlanet();
         }
 
-        //DrawSettingsEditor(planet.shapeSettings, planet.OnShapeSettingsUpdated,  ref planet.shapeSettingsFoldout, ref shapeEditor);
-        //DrawSettingsEditor(planet.colourSettings, planet.OnColourSettingsUpdated, ref planet.colourSettingsFoldout, ref colourEditor);
+        /DrawSettingsEditor(planet.shapeSettings, planet.OnShapeSettingsUpdated,  ref planet.shapeSettingsFoldout, ref shapeEditor);
+        DrawSettingsEditor(planet.colourSettings, planet.OnColourSettingsUpdated, ref planet.colourSettingsFoldout, ref colourEditor);
     }
 
     /*void DrawSettingsEditor(Class settings, System.Action onSettingsUpdated, ref bool foldout, ref Editor editor)
