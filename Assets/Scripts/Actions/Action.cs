@@ -1,14 +1,12 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
-public abstract class Action : MonoBehaviour
-{
+public abstract class Action : MonoBehaviour {
 
-    public enum RARITY
-    {
+    public enum RARITY {
         TRES_COMMUN,
         COMMUN,
         PEU_COMMUN,
@@ -27,33 +25,30 @@ public abstract class Action : MonoBehaviour
     public float drawChance;
     public RARITY rarity;
 
-    private void Start()
-    {
-   
-        GameObject buttonManager = GameObject.FindGameObjectWithTag("ButtonManager");
-        actionManager = buttonManager.GetComponent<ActionManager>();
+    private void Start () {
 
-        variables = GameObject.FindGameObjectWithTag("VariableObject").GetComponent<Variables>();
-        planet = GameObject.FindGameObjectWithTag("Planet");
+        GameObject buttonManager = GameObject.FindGameObjectWithTag ("ButtonManager");
+        actionManager = buttonManager.GetComponent<ActionManager> ();
 
-        if(gameObject != buttonManager)
-        {
-            button = GetComponent<Button>();
+        variables = GameObject.FindGameObjectWithTag ("VariableObject").GetComponent<Variables> ();
+        planet = GameObject.FindGameObjectWithTag ("Planet");
+
+        if (gameObject != buttonManager) {
+            button = GetComponent<Button> ();
             if (button != null)
-                button.onClick.AddListener(executeAction);
+                button.onClick.AddListener (executeAction);
 
-            text_button = GetComponentInChildren<TextMeshProUGUI>();
+            text_button = GetComponentInChildren<TextMeshProUGUI> ();
         }
     }
 
-    private void executeAction()
-    {
-        doAction();
-        actionManager.shuffleButtons();
+    private void executeAction () {
+        doAction ();
+        actionManager.shuffleButtons ();
     }
-    protected abstract void doAction();
+    protected abstract void doAction ();
 
-    public virtual bool isActive() {
+    public virtual bool isActive () {
         return true;
     }
 }
