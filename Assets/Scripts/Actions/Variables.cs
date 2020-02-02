@@ -27,6 +27,7 @@ public class Variables : MonoBehaviour
     public TextMeshProUGUI text_parasite_mute;
     public Image logoRandom;
     private float timeReproduction = 5.0f;
+    GameObject[] parasites55;
 
 
     void Update()
@@ -38,7 +39,6 @@ public class Variables : MonoBehaviour
              timeReproduction=5.0f;
          }
 
-        // Debug.Log((parasite * 0.1f)/25);
     }
 
     IEnumerator Populate(float number, float duration)
@@ -50,6 +50,25 @@ public class Variables : MonoBehaviour
             GameObject newCharacter = Instantiate(character, spawnPosition, spawnRotation) as GameObject;
             newCharacter.transform.LookAt(planet.transform);
             newCharacter.transform.Rotate(-90, 0, 0);
+            yield return 0;
+        }
+    }
+
+    IEnumerator DieParasites(float number, float duration)
+    {
+        List<GameObject> parasites = new List<GameObject>();
+        foreach (GameObject PA in GameObject.FindGameObjectsWithTag("Parasite"))
+        {
+            parasites.Add(PA);
+        }
+        for (float t = 0f; t < duration; t += Time.deltaTime)
+        {
+            if(parasites.Count > 0)
+            {
+                GameObject randGO = parasites[parasites.Count-1];
+                Destroy(randGO);
+                parasites.RemoveAt(parasites.Count - 1);
+            }
             yield return 0;
         }
     }
@@ -73,6 +92,7 @@ public class Variables : MonoBehaviour
         parasite-=(int)(parasite*0.001f*time);
         if(parasite_mute<0) parasite_mute=0;
         if(parasite<0) parasite=0;
+        StartCoroutine(DieParasites(parasite_mute * 0.03f * time, Time.deltaTime * 8));
         text_parasite.text = "parasite:"+this.parasite;
         text_parasite_mute.text = "parasite mute:"+this.parasite_mute;
      }
