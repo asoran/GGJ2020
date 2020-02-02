@@ -38,7 +38,7 @@ public class Variables : MonoBehaviour
              timeReproduction=5.0f;
          }
 
-        Debug.Log((parasite * 0.1f)/25);
+        // Debug.Log((parasite * 0.1f)/25);
     }
 
     IEnumerator Populate(float number, float duration)

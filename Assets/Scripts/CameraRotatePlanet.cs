@@ -53,7 +53,6 @@ public class CameraRotatePlanet : MonoBehaviour
         {
             if (scroll != 0f && (transform.InverseTransformPoint(planet.transform.position).z < limitBackZoom && transform.InverseTransformPoint(planet.transform.position).z > limitFrontZoom) || Mathf.Sign(scroll) == Mathf.Sign(transform.InverseTransformPoint(planet.transform.position).z - limitFrontZoom))
             {
-                print("ransform");
                 transform.position += transform.forward * scroll;
             }
         }
