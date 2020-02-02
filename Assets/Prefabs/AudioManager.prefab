@@ -50,39 +50,75 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+    mixer: {fileID: 0}
   - name: Oddity
     clip: {fileID: 8300000, guid: 0de66f0b7a532384bad9d2c974516d6d, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
+    mixer: {fileID: 0}
   - name: Trouble
     clip: {fileID: 8300000, guid: d9472ab3748cdb248917797010fff9a5, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
+    mixer: {fileID: 0}
   - name: Danger
     clip: {fileID: 8300000, guid: a099d91021a77364d8bfa9eb05dde2ee, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
+    mixer: {fileID: 0}
   - name: Understanding
     clip: {fileID: 8300000, guid: b7fa03421ab6b8843bce1d4e40792f9e, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
+    mixer: {fileID: 0}
   - name: Healing
     clip: {fileID: 8300000, guid: 90b5d78e7a5fec545a94d1aea4ce485c, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
+    mixer: {fileID: 0}
   - name: Futur
     clip: {fileID: 8300000, guid: 6cbb6836dd06d214fac9229559d28db2, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
+    mixer: {fileID: 0}
+  - name: Hope
+    clip: {fileID: 8300000, guid: 056a5e124d6b6a0468bbb2fff3598430, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    mixer: {fileID: 24100000, guid: 7e8a9e30a6e219a4285ecac78b1db867, type: 2}
+  - name: Despair
+    clip: {fileID: 8300000, guid: 5af76494d9d7d8e4c8ba104136326291, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    mixer: {fileID: 24100000, guid: 7e8a9e30a6e219a4285ecac78b1db867, type: 2}
+  - name: Void
+    clip: {fileID: 8300000, guid: b74d2a318e6279d4ab3405b8adb0014a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    mixer: {fileID: 24100000, guid: 7e8a9e30a6e219a4285ecac78b1db867, type: 2}
+  musicPlayed:
+    name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    mixer: {fileID: 0}

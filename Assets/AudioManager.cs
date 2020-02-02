@@ -8,6 +8,8 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager instance;
 
+    public Sound musicPlayed;
+
     private void Awake()
     {
         if (instance == null)
@@ -28,6 +30,8 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+
+            s.source.outputAudioMixerGroup = s.source.outputAudioMixerGroup;
         }
     }
 
@@ -40,5 +44,22 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Play();
+        musicPlayed.name = name;
+    }
+
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound : '" + name + "' not found.");
+            return;
+        }
+        s.source.Stop();
+    }
+
+    public string GetSoundPlaying()
+    {
+        return musicPlayed.name;
     }
 }
