@@ -11,7 +11,7 @@ public class Action_Rechauffement : Action
         if(value<=70) this.variables.die(20);
         float persistence = planet.GetComponent<ShapeSettings>().noiseLayers[0].noiseSettings.simpleNoiseSettings.persistence;
 
-        if(persistence<0.8){
+        if(persistence<1.1){
             planet.GetComponent<Planet>().shapeSettings.noiseLayers[0].noiseSettings.simpleNoiseSettings.persistence+=0.10f;
             planet.GetComponent<Planet>().GeneratePlanet();
         }
