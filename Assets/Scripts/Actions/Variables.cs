@@ -39,7 +39,6 @@ public class Variables : MonoBehaviour
              timeReproduction=5.0f;
          }
 
-
     }
 
     IEnumerator Populate(float number, float duration)

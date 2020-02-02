@@ -79,4 +79,23 @@ public class ActionManager : MonoBehaviour
 
     }
 
+
+    // Because of some obscure reasons, the code of Action_seisme is here
+    // =)
+    public void doSeisme(List<Transform> plates, int nbSecousses) {
+        StartCoroutine(secouer(plates, nbSecousses));
+    }
+    private IEnumerator secouer(List<Transform> plates, int nbSecousses) {
+        while(nbSecousses-- > 0) {
+            foreach(Transform g in plates){
+                float x = Random.Range(0,2) < 1 ? .1f : -.1f;
+                g.position = new Vector3(x, g.position.y, g.position.z);
+            }
+
+            yield return new WaitForSecondsRealtime(.1f);
+        }
+        foreach(Transform g in plates){
+            g.position = new Vector3( 0f, g.position.y, g.position.z);
+        }
+    }
 }

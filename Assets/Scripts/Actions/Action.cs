@@ -18,7 +18,7 @@ public abstract class Action : MonoBehaviour
 
     public GameObject planet;
 
-    private ActionManager actionManager;
+    protected ActionManager actionManager;
     protected Variables variables;
     public Sprite sprite;
     private Button button;
