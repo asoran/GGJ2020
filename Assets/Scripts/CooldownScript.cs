@@ -10,7 +10,6 @@ public class CooldownScript : MonoBehaviour
     private void Start()
     {
         button = GetComponent<Button>();
-        button.onClick.AddListener(CoolDown);
     }
 
     public void CoolDown()
@@ -18,7 +17,7 @@ public class CooldownScript : MonoBehaviour
         StartCoroutine(Waiting());
     }
 
-    IEnumerator Waiting()
+    private IEnumerator Waiting()
     {
         button.interactable = false;
         yield return new WaitForSeconds(waitTime);
