@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class MenuScript : MonoBehaviour
 {
@@ -18,6 +21,12 @@ public class MenuScript : MonoBehaviour
 
     public void Quit()
     {
+        // Si lancer depuis Unity
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#else
+        // Sinon Quitter le jeux si c'est un build
         Application.Quit();
+#endif
     }
 }
